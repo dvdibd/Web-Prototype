@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RMCC</title>
+    <link href="getinvolved.css" rel="stylesheet" type="text/css" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+  </head>
+  <body>
+    <script >
+      function openSlideMenu() {
+        document.getElementById('side-menu').style.width = '250px';
+        document.getElementById('main').style.marginLeft = '250px';
+      }
+      function closeSlideMenu() {
+        document.getElementById('side-menu').style.width = '0';
+        document.getElementById('main').style.marginLeft = '0';
+      }
+      
+    </script>
+    <nav class="navbar">
+      <span class="open-slide">
+        <a href="#" onclick="openSlideMenu()">
+          <svg width="30" height="30">
+            <path d="M0,5 30,5" stroke="#fff" stroke-width="5" />
+            <path d="M0,14 30,14" stroke="#fff" stroke-width="5" />
+            <path d="M0,23 30,23" stroke="#fff" stroke-width="5" />
+          </svg>
+        </a>
+      </span>
+      <ul class="navbar-nav">
+        <li><a href="aboutus.html">About Us</a></li>
+        
+        <li><a href="getinvolved.html">Get Involved</a></li>
+      </ul>
+      <div class="mainLogo"><img class="img" src="pics/website-logo.png" ></div>
+      <div class="navDon">
+        <a href="donate.html"><button aria-labelledby="buttonText" class="button"><span>Donate</span>
+          </button></a>
+      </div>
+      
+    </nav>
+    <div id="side-menu" class="side-nav">
+        <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+        <a href="index.html" >Home</a>
+        <li><a href="aboutus.html">About Us</a></li>
+        
+        <li><a href="getinvolved.html">Get Involved</a></li>
+    </div>
+    <div>
+      
+    </div>
+    <!-- 
+    <div id="main">
+      <h1>responsive side menu</h1>
+    </div>-->
+    <div class="rmccPic">
+      <img src="pics/img1.jpg"  class="mainPic">
+    </div>
+    <form action="action_page.php">
+      <div class="container">
+        <h2>Subscribe to our E-Newsletter</h2>
+        
+      </div>
+
+      <div class="container" style="background-color:white">
+        <input type="text" placeholder="Name" name="name" required>
+        <input type="text" placeholder="Email address" name="mail" required>
+        <label>
+          <input type="checkbox" checked="checked" name="subscribe"> E-Newsletter
+        </label>
+      </div>
+
+      <div class="container">
+        <input type="submit" value="Subscribe">
+      </div>
+    </form>
+    <div class="space"></div>
+    <div class="bottomInfo">
+      
+      <h2 class="bottomInfoh">Contact Us</h2>
+      <h3 class="bottomInfoh">RMCC HQ</h3>
+      <h3 class="bottomInfoh">21A Sun Crescent, <br> Sunshine VIC 3020</h3>
+      <h3 class="bottomInfoh">Phone: (03) 9028 5255</h3>
+      <h3 class="bottomInfoh">Email : contact rmccaustralia.org.au</h3>
+    
+    </div>
+    
+    <div class="footer">
+      <p>Footer</p>
+    </div>
+  
+  </body>
+</html>

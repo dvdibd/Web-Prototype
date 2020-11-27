@@ -7,16 +7,7 @@ body  {
 
   overflow-x: hidden;
 }
-.container-1{
-  display: -webkit-flex;
-}
 
-h1 {
-  color: black;
-  font-size: 35px; 
-  text-align: center;
-  text-transform: uppercase;
-}
 
 /* navbar */
 .navbar{
@@ -178,120 +169,47 @@ figure iframe {
 
 
 
-.navDon {
-  top: 10px;
-  
+/* sign up to volunteer */
+
+form {
+  border: 4px solid #f1f1f1;
 }
 
-.weDo {
-  padding: 40px;
-}
-.don2 {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 50px;
-}
-/* img */
-.img {
-  float: right;
-  width: 100px;
-  margin-right: 10px;
+/* Add some padding and a grey background color to containers */
+.container {
+  padding: 20px;
+  background-color: #f1f1f1;
 }
 
-
-/* slider */
-
-#slider, .wrap, .slide-content{
-  margin: 0;
-  padding: 0;
-  height: 600px;
-  width:100%
-  
-}
-.wrap {
-  position: relative;
+/* Style the input elements and the submit button */
+input[type=text], input[type=submit] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }
 
-.slide{
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+/* Add margins to the checkbox */
+input[type=checkbox] {
+  margin-top: 16px;
 }
 
-.slide1{background-image: url('pics/img1.jpg')}
-.slide2{background-image: url('pics/img2.jpg')}
-.slide3{background-image: url('pics/img3.jpg')}
-
-.slide-content{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+/* Style the submit button */
+input[type=submit] {
+  background-color: rgb(44, 158, 173);
+  color: white;
+  border: none;
 }
 
-.slide-content span{
-  font-size: 2rem;
-  color: #fff;
+input[type=submit]:hover {
+  opacity: 0.8;
 }
 
-.arrow{
-  cursor: pointer;
-  position: absolute;
-  top: 331px;
-  margin-top: -60px;
-  width: 0;
-  height: 0;
-  border-style: solid;
+.space{
+  height: 100px;
 }
-
-#arrow-left{
-  border-width: 30px 40px 30px 0;
-  border-color: transparent #fff transparent transparent;
-  left: 0;
-  margin-left: 30px;
-}
-#arrow-right{
-  border-width: 30px 0 30px 40px;
-  border-color: transparent transparent transparent #fff ;
-  right: 0;
-  margin-right: 30px;
-}
-@media screen and (max-width: 400px) {
-    div span:last-of-type {
-        display: block;
-        
-    }
-}
-@media(max-width:568px){
-  div span:nth-of-type(2) {
-        display: block;
-        
-  }
-
-}
-
-
-/* PMCC info segments */
-.picContainer {
-  display: -webkit-flex;
-  display: flex; /* or inline-flex */
-  justify-content: space-evenly ;
-  text-align: center;
-  padding: 30px;
- 
-}
-
-
-
-@media(max-width:568px){
-  .picContainer {
-    -webkit-flex-direction: column;
-    flex-direction: column;
-  }
-
-}
-
 /* bottom info */
 * {
   margin: 0;
@@ -311,7 +229,11 @@ figure iframe {
   color: white;
 }
 
-
+.mainPic{
+  height: 600px;
+  width: 100%
+  
+}
 
 
 /* footer */

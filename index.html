@@ -1,12 +1,182 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RMCC</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href=”website-logo.png”/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
   </head>
   <body>
-    <script src="script.js"></script>
+    
+    <nav class="navbar">
+      <span class="open-slide">
+        <a href="#" onclick="openSlideMenu()">
+          <svg width="30" height="30">
+            <path d="M0,5 30,5" stroke="#fff" stroke-width="5" />
+            <path d="M0,14 30,14" stroke="#fff" stroke-width="5" />
+            <path d="M0,23 30,23" stroke="#fff" stroke-width="5" />
+          </svg>
+        </a>
+      </span>
+      <ul class="navbar-nav">
+        <li><a href="aboutus.html">About Us</a></li>
+        
+        <li><a href="getinvolved.html">Get Involved</a></li>
+      </ul>
+      <div class="mainLogo"><img class="img" src="pics/website-logo.png" ></div>
+      <div class="navDon">
+        <a href="donate.html"><button aria-labelledby="buttonText" class="button"><span>Donate</span>
+          </button></a>
+      </div>
+      
+    </nav>
+    <div id="side-menu" class="side-nav">
+        <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+        <a href="index.html" >Home</a>
+        <a href="aboutus.html" >About Us</a>
+        
+        <a href="getinvolved.html" >Get Involved</a>
+    </div>
+    <!-- 
+    <div id="main">
+      <h1>responsive side menu</h1>
+    </div>-->
+    <div class="wrap">
+      <div id="arrow-left" class="arrow"></div>
+      <div id="slider">
+          <div class="slide slide1">
+            <div class="slide-content">
+              <span>WE </span><span>HELP</span><span> KIDS FROM REFUGEE </span><span>AND </span><span>MIGRANT</span><span> BACKGROUNDS </span><span> THRIVE </span><span>IN SCHOOL </span><span>AND </span><span>LIFE</span>
+            </div>
+          </div>
+          <div class="slide slide2">
+            <div class="slide-content">
+              <span>WE </span><span>HELP</span><span> KIDS FROM REFUGEE </span><span>AND </span><span>MIGRANT</span><span> BACKGROUNDS </span><span> THRIVE </span><span>IN SCHOOL </span><span>AND </span><span>LIFE</span>
+            </div>
+          </div>
+          <div class="slide slide3">
+            <div class="slide-content">
+              <span>WE HELP</span><span> KIDS FROM REFUGEE </span><span>AND </span><span>MIGRANT</span><span> BACKGROUNDS </span><span> THRIVE </span><span>IN SCHOOL </span><span>AND LIFE</span>
+            </div>
+          </div>
+
+      </div>
+      <div id="arrow-right" class="arrow"></div>
+      
+    </div>
+    <h1 class="weDo">What We Do</h1>
+    <div class="picContainer">
+      <div class="area1">
+        <div class="pic1"><img src="pics/pic1.jpg" class="infop"></div>
+        <div class="info1"><h2>Kids Empowered Through our Programs</h2><br> 
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem in numquam cum ab eius! Quasi.</p></div>
+      </div>
+      
+      <div class="area1">
+        <div class="pic1"><img src="pics/pic2.jpg" class="infop"></div>
+        <div class="info1"><h2>14,294 Hours of Programs Delivered</h2><br><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem in numquam cum ab eius! Quasi.</p></div>
+      </div>
+      <div class="area3">
+        <div class="pic1"><img src="pics/pic3.jpg" class="infop"></div>
+        <div class="info1"><h2>1,126 Kids Equipped with School Necessities</h2><br><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem in numquam cum ab eius! Quasi.</p> </div>
+      </div>
+      
+    </div>
+    
+
+    
+    <figure>
+				<iframe width="560" height="315" src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FRMCCau%2Fvideos%2F449322972530083%2F&show_text=false&width=560" frameborder="0" allowfullscreen></iframe>
+				
+		</figure>
+
+    
+
+    <div class="don2"><a href="donate.html"><button aria-labelledby="buttonText" class="button"><span>Donate</span>
+          </button></a></div>
+    
+    
+    <div class="bottomInfo">
+      
+      <h2 class="bottomInfoh">Contact Us</h2>
+      <h3 class="bottomInfoh">RMCC HQ</h3>
+      <h3 class="bottomInfoh">21A Sun Crescent, <br> Sunshine VIC 3020</h3>
+      <h3 class="bottomInfoh">Phone: (03) 9028 5255</h3>
+      <h3 class="bottomInfoh">Email : contact rmccaustralia.org.au</h3>
+    
+    </div>
+    
+    <div class="footer">
+      <p>Footer</p>
+    </div>
+ 
+    <script >
+      //nav open/close
+      function openSlideMenu() {
+        document.getElementById('side-menu').style.width = '250px';
+        document.getElementById('main').style.marginLeft = '250px';
+      }
+      function closeSlideMenu() {
+        document.getElementById('side-menu').style.width = '0';
+        document.getElementById('main').style.marginLeft = '0';
+      }
+      
+      
+      //sliderImage
+      
+      let sliderImages = document.querySelectorAll('.slide'),
+          arrowLeft = document.querySelector('#arrow-left'),
+          arrowRight = document.querySelector('#arrow-right'),
+          current = 0;
+
+      function reset(){
+        for(let i = 0; i < sliderImages.length; i++){
+          sliderImages[i].style.display = 'none';
+        }
+      }
+
+
+      function startSlide(){
+        reset();
+        sliderImages[0].style.display = 'block';
+      }
+      //Show previous
+
+      function slideLeft(){
+        reset();
+        sliderImages[current - 1].style.display = 'block';
+        current--;
+      }
+      //show next
+      function slideRight(){
+        reset();
+        sliderImages[current+ 1].style.display = 'block';
+        current++;
+      }
+
+      // Left arrow click
+
+      arrowLeft.addEventListener('click', function(){
+        if(current === 0){
+          current = sliderImages.length;
+        }
+        slideLeft();
+      });
+       // right arrow click
+
+      arrowRight.addEventListener('click', function(){
+        if(current === sliderImages.length - 1){
+          current = -1;
+        }
+        slideRight();
+      });
+      startSlide();
+    </script>
   </body>
+  <footer>
+    
+  </footer>
 </html>
